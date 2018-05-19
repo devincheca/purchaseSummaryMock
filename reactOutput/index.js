@@ -11704,7 +11704,7 @@ var _styles2 = _interopRequireDefault(_styles);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var store = (0, _redux.createStore)(_index2.default); // Author: Devin Checa
-// 1/2/2017
+// 5/18/2018
 
 
 (0, _reactDom.render)(_react2.default.createElement(
@@ -25254,11 +25254,7 @@ var _styles2 = _interopRequireDefault(_styles);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function now() {
-  return (Date() + "").substr(16, 2) + ":" + (Date() + "").substr(19, 2);
-}
-
-var BlackBar = function BlackBar() {
+var LineItem = function LineItem(props) {
   return _react2.default.createElement(
     'div',
     { className: 'animated fadeInDown', style: _styles2.default.text.subText },
@@ -25268,23 +25264,19 @@ var BlackBar = function BlackBar() {
       _react2.default.createElement(
         'div',
         { className: 'col-4', style: _styles2.default.align.left },
-        '.....'
+        props.name
       ),
-      _react2.default.createElement(
-        'div',
-        { className: 'col-4', style: _styles2.default.align.center },
-        now()
-      ),
+      _react2.default.createElement('div', { className: 'col-4', style: _styles2.default.align.center }),
       _react2.default.createElement(
         'div',
         { className: 'col-4', style: _styles2.default.align.right },
-        '100%\uD83D\uDD0B'
+        props.amount
       )
     )
   );
 };
 
-exports.default = BlackBar;
+exports.default = LineItem;
 
 /***/ }),
 /* 564 */

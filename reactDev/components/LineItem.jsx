@@ -1,23 +1,21 @@
 import React from 'react'
 import styles from '../styles.jsx'
 
-function now() { return (Date() + "").substr(16,2) + ":" + (Date() + "").substr(19,2) }
-
-const BlackBar = () => 
+const LineItem = (props) => 
 (
   <div className="animated fadeInDown" style={styles.text.subText}>
     <div className="row">
       <div className="col-4" style={styles.align.left}>
-        .....
+        {props.name}
       </div>
       <div className="col-4" style={styles.align.center}>
-        { now() }
+        
       </div>
       <div className="col-4" style={styles.align.right}>
-      100%🔋
+      {props.amount}
       </div>
     </div>
   </div>
 )
 
-export default BlackBar
+export default LineItem

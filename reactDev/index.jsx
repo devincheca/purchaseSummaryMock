@@ -1,5 +1,5 @@
 // Author: Devin Checa
-// 1/2/2017
+// 5/18/2018
 import React from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
