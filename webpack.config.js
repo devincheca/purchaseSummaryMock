@@ -10,7 +10,7 @@ var config = {
     path: OUTPUT,
     filename: "index.js"
   },
-  watch: false,
+  watch: true,
   module: {
     loaders: [{
       include: DEV,

@@ -1,45 +1,43 @@
 import React from 'react'
-import BlackBar from './BlackBar.jsx'
-import Chart from './Chart.jsx'
-import Dashboard from './Dashboard.jsx'
-import OrderBar from './OrderBar.jsx'
-import SalesChart from './SalesChart.jsx'
-import SalesTable from './SalesTable.jsx'
+import DetailsToggle from '../containers/DetailsToggle.jsx'
+import LineItem from './LineItem.jsx'
+import PromoToggle from '../containers/PromoToggle.jsx'
 import styles from '../styles.jsx'
-import TimeBar from './TimeBar.jsx'
-import Sales from './Sales.jsx'
 
 const App = () => 
 (
   <div>
-    <BlackBar />
-    <br />
-    <Dashboard />
-    <br />
-    <TimeBar />
-    <br />
-    <OrderBar />
-    <br />
-    <Sales 
-      header="Total Sales"
-      dollars="$448.50"/>
-    <br />
-    <SalesChart />
-    <br />
-    <div style={styles.align.center}>
-    <Chart 
-      source={
-      {
-        location: 'images/ring.jpg',
-      }}
-      />
-    </div>
-    <br />
-    <Sales 
-      header="Sales"
-      dollars="135"/>
-    <br />
-    <SalesTable />
+    <LineItem 
+      amount='102.96'
+      bold=''
+      color='black'
+      name='Subtotal'
+      toolTip=''
+    />
+    <LineItem 
+      amount='-$3.85'
+      bold=''
+      color='red'
+      name='Pickup savings'
+      toolTip='Picking up your order in the store helps cut costs, and we pass the savings on to you.'
+    />
+    <LineItem 
+      amount='8.92'
+      bold=''
+      color='black'
+      name='Est. taxes & fees\n(Based on 94085)'
+      toolTip=''
+    />
+    <hr></hr>
+    <LineItem 
+      amount='108.03'
+      bold='true'
+      color='black'
+      name='Est. total'
+      toolTip=''
+    />
+    <DetailsToggle />
+    <PromoToggle />
   </div>
 )
 

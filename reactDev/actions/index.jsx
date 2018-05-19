@@ -18,3 +18,19 @@ export const setVisibilityFilter = filter => {
     filter,
   }
 }
+
+export const setDetailsFilter = filter =>
+{
+  return {
+    type: 'SET_DETAILS_FILTER',
+    filter,
+  }
+}
+
+export const setPromoFilter = filter =>
+{
+  return {
+    type: 'SET_PROMO_FILTER',
+    filter,
+  }
+}

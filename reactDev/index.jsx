@@ -11,7 +11,7 @@ import styles from './styles.jsx'
 let store = createStore(dashboardApp)
 
 render(
-  <div style={styles.mainBackground}>
+  <div>
   <Provider store={store}>
     <App />
   </Provider>
