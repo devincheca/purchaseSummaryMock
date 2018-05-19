@@ -27,14 +27,6 @@ export const applyPromo = code =>
   }
 }
 
-export const promoCodeChange = code =>
-{
-  return {
-    type: 'PROMO_CODE_CHANGE',
-    code,
-  }
-}
-
 export const setDetailsFilter = filter =>
 {
   return {

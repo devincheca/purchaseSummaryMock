@@ -2,39 +2,41 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styles from '../styles.jsx'
 
-const PromoBar = ({ code, onChange, onClick }) =>
+const PromoBar = ({ onClick }) =>
 {
+  let input
   return (
-    <div className="row">
-      <div className="col-9 animated slideInLeft">
-        <div style={{color: 'grey'}}>Promo code</div>
-        <input onChange={e =>
-        {
-          e.preventDefault()
-          onChange(this.value)
-        }}>
-        </input>
-      </div>
-      <div className="col-3 animated fadeInUp" style={styles.align.right}>
-        <button
-          className="btn"
-          onClick={e => 
+    <div className="">
+      <form
+        onSubmit={e =>
+          {
+            e.preventDefault()
+            if (!input.value.trim())
             {
-              e.preventDefault()
-              onClick(code)
-            }}>
-          style={Object.assign({}, styles.round, {fontWeight: 'bold'})}>
-          Apply
-        </button>
-      </div>
+              return
+            }
+            onClick(input.value)
+            input.value = ''
+          }}>
+        <span className="animated slideInLeft">
+          <div style={{color: 'grey'}}>Promo code</div>
+          <input ref={node => input = node} />
+        </span>
+        <span className="animated fadeInUp" style={{float: 'right'}}>
+          <button
+            className="btn"
+            type="submit"
+            style={Object.assign({}, styles.round, {fontWeight: 'bold'})}>
+            Apply
+          </button>
+        </span>
+      </form>
     </div>
   )
 }
 
 PromoBar.propTypes = 
 {
-  code: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired,
   onClick: PropTypes.func.isRequired,
 }
 
