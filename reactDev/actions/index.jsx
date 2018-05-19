@@ -1,24 +1,3 @@
-export const setBurgerFilter = filter => {
-  return {
-      type: 'SET_BURGER_FILTER',
-      filter
-    }
-}
-
-export const setSearchFilter = filter => {
-  return {
-    type: 'SET_SEARCH_FILTER',
-    filter
-  }
-}
-
-export const setVisibilityFilter = filter => {
-  return {
-    type: 'SET_VISIBILITY_FILTER',
-    filter,
-  }
-}
-
 export const applyPromo = code =>
 {
   return {
@@ -39,6 +18,14 @@ export const setPromoFilter = filter =>
 {
   return {
     type: 'SET_PROMO_FILTER',
+    filter,
+  }
+}
+
+export const setTooltipFilter = filter =>
+{
+  return {
+    type: 'SET_TOOLTIP_FILTER',
     filter,
   }
 }
