@@ -29,10 +29,14 @@ const TooltipBar = ({ active, onClick }) =>
           </div>
         </div>
         <div className="row animated fadeInLeft">
+          <div className="col-1">
+          </div>
           <div 
-            className="col-6"
+            className="col-5"
             style={styles.tooltip}>
             Picking up your order in the store helps cut costs, and we pass the savings on to you.
+          </div>
+          <div className="col-6">
           </div>
         </div>
       </div>
