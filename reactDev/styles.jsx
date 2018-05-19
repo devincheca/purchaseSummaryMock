@@ -78,8 +78,9 @@ let styles =
   },
   round:
   {
-    border: '2px solid beige',
-    borderRadius: '10px',
+    border: '2px solid black',
+    borderRadius: '20px',
+    backgroundColor: 'white',
   },
   statusBar:
   {
@@ -89,6 +90,11 @@ let styles =
   },
   text:
   {
+    lineThrough:
+    {
+      color: 'grey',
+      textDecoration: 'line-through',
+    },
     mainText:
     {
       color: 'beige',

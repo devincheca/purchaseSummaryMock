@@ -1,24 +1,24 @@
 import { connect } from 'react-redux'
-import { setBurgerFilter } from '../actions/index.jsx'
-import Menu from '../components/Menu.jsx'
+import { setPromoFilter } from '../actions/index.jsx'
+import Promo from '../components/Promo.jsx'
 
 const mapStateToProps = (state) => {
   return {
-    active: state.burgerFilter === 'ON',
+    active: state.promoFilter === 'ON',
   }
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
     onClick: (active) => {
-      dispatch(setBurgerFilter(active))
+      dispatch(setPromoFilter(active))
     }
   }
 }
 
-const BurgerToggle = connect(
+const PromoToggle = connect(
   mapStateToProps,
   mapDispatchToProps
-)(Menu)
+)(Promo)
 
-export default BurgerToggle
+export default PromoToggle

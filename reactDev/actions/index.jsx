@@ -19,6 +19,22 @@ export const setVisibilityFilter = filter => {
   }
 }
 
+export const applyPromo = code =>
+{
+  return {
+    type: 'APPLY_PROMO',
+    code,
+  }
+}
+
+export const promoCodeChange = code =>
+{
+  return {
+    type: 'PROMO_CODE_CHANGE',
+    code,
+  }
+}
+
 export const setDetailsFilter = filter =>
 {
   return {

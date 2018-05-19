@@ -4,11 +4,11 @@ import React from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
-import dashboardApp from './reducers/index.jsx'
+import purchaseSummary from './reducers/index.jsx'
 import App from './components/App.jsx'
 import styles from './styles.jsx'
 
-let store = createStore(dashboardApp)
+let store = createStore(purchaseSummary)
 
 render(
   <div>
