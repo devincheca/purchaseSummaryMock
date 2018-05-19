@@ -15,7 +15,10 @@ const Promo = ({ active, onClick }) =>
             e.preventDefault()
             onClick(active)
           }}>
-        Hide promo code -
+        <span
+          style={styles.text.underline}>
+          Hide promo code
+        </span> -
         </div>
         <PromoInput />
       </div>
@@ -29,7 +32,10 @@ const Promo = ({ active, onClick }) =>
           e.preventDefault()
           onClick(active)
         }}>
-      Apply promo code +
+      <span
+          style={styles.text.underline}>
+          Apply promo code
+      </span> +
     </div>
   )
 }

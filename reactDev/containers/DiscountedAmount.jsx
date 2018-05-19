@@ -34,7 +34,7 @@ let Amount = ({ discount }) =>
 }
 Amount.propTypes = 
 {
-  discount: PropTypes.string.isRequired
+  discount: PropTypes.string
 }
 
 const DiscountedAmount = connect(

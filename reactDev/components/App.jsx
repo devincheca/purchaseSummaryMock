@@ -3,6 +3,7 @@ import DetailsToggle from '../containers/DetailsToggle.jsx'
 import LineItem from './LineItem.jsx'
 import PromoToggle from '../containers/PromoToggle.jsx'
 import styles from '../styles.jsx'
+import TooltipToggle from '../containers/TooltipToggle.jsx';
 
 const App = () => 
 (
@@ -12,12 +13,7 @@ const App = () =>
       color='black'
       name='Subtotal'
     />
-    <LineItem 
-      amount='3.85'
-      color='red'
-      name='Pickup savings'
-      toolTip='Picking up your order in the store helps cut costs, and we pass the savings on to you.'
-    />
+    <TooltipToggle />
     <LineItem 
       amount='8.92'
       color='black'

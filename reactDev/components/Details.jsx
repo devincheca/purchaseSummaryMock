@@ -14,13 +14,16 @@ const Details = ({ active, onClick }) =>
             e.preventDefault()
             onClick(active)
           }}>
-        Hide item details -
+        <span
+          style={styles.text.underline}>
+          Hide item details
+        </span> -
         </div>
         <div className="row">
           <div className="col-3">
             <img 
               className="img-fluid animated slideInLeft"
-              src="images/redChair.jpeg"></img>
+              src="public/images/redChair.jpeg"></img>
           </div>
           <div className="col-9 animated fadeInUp">
             <div>
@@ -46,7 +49,10 @@ const Details = ({ active, onClick }) =>
           e.preventDefault()
           onClick(active)
         }}>
-      See item details +
+      <span
+          style={styles.text.underline}>
+          See item details
+      </span> +
     </div>
   )
 }

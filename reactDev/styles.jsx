@@ -39,23 +39,40 @@ let styles =
     },
     mainText:
     {
-      color: 'beige',
+      color: 'black',
       fontWeight: 'bold',
     },
     plainText:
     {
-      color: 'beige',
+      color: 'black',
     },
     subText:
     {
-      color: 'beige',
+      color: 'black',
       fontWeight: 'bold',
       opacity: '0.5',
+    },
+    underline:
+    {
+      textDecoration: 'underline',
     },
     whiteText:
     {
       color: 'white',
     },
+  },
+  tooltip:
+  {
+    width: '100%',
+    backgroundColor: 'white',
+    textAlign: 'center',
+    borderRadius: '3px',
+    borderColor: 'grey',
+    borderStyle: 'solid',
+    borderWidth: '1px',
+    padding: '5px 0',
+    position: 'relative',
+    zIndex: '1',
   },
 }
 module.exports = styles;

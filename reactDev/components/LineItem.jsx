@@ -4,7 +4,7 @@ import DiscountedAmount from '../containers/DiscountedAmount.jsx'
 
 const LineItem = (props) => 
 {
-  if (props.name !== 'Est. total' && props.toolTip === '')
+  if (props.name !== 'Est. total')
   {
     return (
     <div className="animated fadeInDown">
@@ -24,53 +24,20 @@ const LineItem = (props) =>
     </div>
     )
   }
-  else if (props.toolTip !== '')
-  {
-    let renderedTooltip = ''
-    function renderTooltip()
-    {
-      renderedTooltip = props.toolTip
-    }
-    return (
-      <div className="animated fadeInDown">
-        <div className="row" onClick={e =>
-          {
-            renderTooltip(props.toolTip)
-          }}
-          style={{fontWeight: props.bold ? 'bold' : ''}}>
-          <div className="col-6" style={styles.align.left}>
-            <div>
-              {props.name}
-            </div>
-            <div>
-              {props.specs}
-            </div>
-          </div>
-          <div className="col-6" style={Object.assign({}, styles.align.right, {color: props.color})}>
-            {props.color === 'red' ? '-$' + props.amount : '$' + props.amount}
-          </div>
-        </div>
-        <div>
-          {renderTooltip(props.toolTip)}
-        </div>
-      </div>
-      )
-  }
   else
   {
     return (
     <div className="animated fadeInDown">
       <div className="row" style={{fontWeight: props.bold ? 'bold' : ''}}>
         <div className="col-6" style={styles.align.left}>
-          <div>
+          <h3>
             {props.name}
-          </div>
-          <div>
-            {props.specs}
-          </div>
+          </h3>
         </div>
         <div className="col-6" style={Object.assign({}, styles.align.right, {color: props.color})}>
-          <DiscountedAmount />
+          <h3>
+            <DiscountedAmount />
+          </h3>
         </div>
       </div>
     </div>
