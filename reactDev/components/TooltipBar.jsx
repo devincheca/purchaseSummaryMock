@@ -51,7 +51,7 @@ const TooltipBar = ({ active, onClick }) =>
             Pickup savings
           </div>
         </div>
-        <div className="col-6" style={Object.assign({}, styles.align.right, {color: 'red'})}>
+        <div className="col-6" style={Object.assign({}, styles.align.right, {color: 'red', fontWeight: 'bold'})}>
           -$3.85
         </div>
       </div>

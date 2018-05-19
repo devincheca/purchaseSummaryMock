@@ -5,22 +5,14 @@ import PropTypes from 'prop-types'
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    discounted: state.applyPromoPress === ownProps.discounted,
-  }
-}
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-    onClick: (active) => {
-      dispatch(setDetailsFilter(active))
-    }
+    discount: state.applyPromoPress === ownProps.discounted,
   }
 }
 
 function compute(discount) 
 {
   return discount
-    ? 108.03 * .9
+    ? Math.round((108.03 * .9) * 100) / 100
     : 108.03
 }
 
@@ -34,7 +26,7 @@ let Amount = ({ discount }) =>
 }
 Amount.propTypes = 
 {
-  discount: PropTypes.string
+  discount: PropTypes.bool
 }
 
 const DiscountedAmount = connect(

@@ -30,7 +30,7 @@ const Details = ({ active, onClick }) =>
               Essentials by OFM ESS-3085 Racing Style Leather Gaming Chair, Red
             </div>
             <div className="row">
-              <div className="col-6">$99.11</div>
+              <div className="col-6" style={{fontWeight: 'bold'}}>$99.11</div>
               <div className="col-6" style={styles.align.right}>Qty:1</div>
             </div>
             <div style={styles.text.lineThrough}>

@@ -17,7 +17,7 @@ const LineItem = (props) =>
             {props.specs}
           </div>
         </div>
-        <div className="col-6" style={Object.assign({}, styles.align.right, {color: props.color})}>
+        <div className="col-6" style={Object.assign({}, styles.align.right, {color: props.color, fontWeight: 'bold'})}>
           {props.color === 'red' ? '-$' + props.amount : '$' + props.amount}
         </div>
       </div>
@@ -36,7 +36,7 @@ const LineItem = (props) =>
         </div>
         <div className="col-6" style={Object.assign({}, styles.align.right, {color: props.color})}>
           <h3>
-            <DiscountedAmount />
+            <DiscountedAmount discounted="DISCOUNT" />
           </h3>
         </div>
       </div>
