@@ -1,4 +1,5 @@
 import React from 'react'
+import data from '../data.jsx'
 import PropTypes from 'prop-types'
 import styles from '../styles.jsx'
 
@@ -23,18 +24,18 @@ const Details = ({ active, onClick }) =>
           <div className="col-3">
             <img 
               className="img-fluid animated slideInLeft"
-              src="public/images/redChair.jpeg"></img>
+              src={data.imgSrc}></img>
           </div>
           <div className="col-9 animated fadeInUp">
             <div>
-              Essentials by OFM ESS-3085 Racing Style Leather Gaming Chair, Red
+              {data.description}
             </div>
             <div className="row">
-              <div className="col-6" style={{fontWeight: 'bold'}}>$99.11</div>
-              <div className="col-6" style={styles.align.right}>Qty:1</div>
+              <div className="col-6" style={{fontWeight: 'bold'}}>${data.price}</div>
+              <div className="col-6" style={styles.align.right}>Qty:{data.quantity}</div>
             </div>
             <div style={styles.text.lineThrough}>
-              $102.96
+              ${data.subtotal}
             </div>
           </div>
         </div>

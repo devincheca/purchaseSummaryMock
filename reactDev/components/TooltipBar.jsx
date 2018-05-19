@@ -1,4 +1,5 @@
 import React from 'react'
+import data from '../data.jsx'
 import PropTypes from 'prop-types'
 import styles from '../styles.jsx'
 
@@ -22,12 +23,12 @@ const TooltipBar = ({ active, onClick }) =>
                 Pickup savings
               </div>
             </div>
-            <div className="col-6" style={Object.assign({}, styles.align.right, {color: 'red'})}>
-              -$3.85
+            <div className="col-6" style={Object.assign({}, styles.align.right, {color: 'red', fontWeight: 'bold'})}>
+              -${data.savings}
             </div>
           </div>
         </div>
-        <div className="row animated fadeInUp">
+        <div className="row animated fadeInLeft">
           <div 
             className="col-6"
             style={styles.tooltip}>
@@ -52,7 +53,7 @@ const TooltipBar = ({ active, onClick }) =>
           </div>
         </div>
         <div className="col-6" style={Object.assign({}, styles.align.right, {color: 'red', fontWeight: 'bold'})}>
-          -$3.85
+          -${data.savings}
         </div>
       </div>
     </div>
